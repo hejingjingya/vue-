@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+      [v-cloak] {
+          display: none;
+      }
+    
+    </style>
+</head>
+<body>
+    <!-- 1.提供标签作为容器，填充数据 -->
+    <div id="app">
+        <!-- 4.利用插值表达式完成数据展示， 语法：{{ 表达式 }} -->
+        <!-- 里面的msg就是下面的 msg: "hello world" -->
+        <!-- 如果data的数据很多可以使用“+”拼接 -->
+       <div v-cloak> {{msg}} </div>
+    </div>
+<!-- 2.引入js文件 -->
+    <script src="js/vue.js"></script>
+    <script>
+        // 3.使用vue语法实现功能
+        var age = new Vue({
+            // el 元素挂载位置
+            el: "#app",
+            // data 提供数据
+            data: {
+                msg: "hello world"
+            }
+        })
+    </script>
+
+    <!-- v-cloak 指令的用法   解决表达式闪动问题 -->
+
+</body>
+
+</html>
